@@ -1,0 +1,31 @@
+<div *ngIf="employee">
+    <h2>{{employee.fname}} properties</h2>
+    <table>
+        <tr>
+            <td><label>Employee Id: </label></td>
+            <td>{{employee.empId}}</td>
+        </tr>
+        <tr>
+            <td><label>First Name: </label></td>
+            <td><input [(ngModel)]="employee.fname" placeholder="fname" /></td>
+        <!--   <td>{{employee.fname}}</td> -->
+        </tr>
+        <tr>
+            <td><label>Last Name: </label></td>
+            <td><input [(ngModel)]="employee.lname" placeholder="type" /></td>
+         <!--  <td>{{employee.lname}}</td> -->
+        </tr>
+        <tr>
+            <td><label>Email: </label></td>
+            <td><input [(ngModel)]="employee.email" placeholder="mass" /></td>
+        <!--   <td>{{employee.email}}</td> -->
+        </tr>
+         <tr>
+            <td><label>Phone Number: </label></td>
+            <td><input [(ngModel)]="employee.phoneNumber" placeholder="mass" /></td>
+       <!--    <td>{{employee.phoneNumber}}</td> -->
+        </tr>
+    </table>
+    
+    <button  (click)="updateEmployeeDetails(employee)">Update</button>
+</div>
